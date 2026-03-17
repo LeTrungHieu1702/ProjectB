@@ -613,7 +613,7 @@ export const ExercisePage = () => {
                 <div className="bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-xl transition-colors duration-300 z-10">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Tiến độ Bài Tập</h2>
                   <p className="text-xs text-gray-700 dark:text-gray-400 mb-3">Mục tiêu: {targetReps} lần trong {currentExercise?.duration_seconds ? Math.floor(currentExercise.duration_seconds / 60) : 3} phút</p>
-                  
+
                   <div className="space-y-2">
                     {/* Timer display */}
                     {isExercising && remainingTime > 0 && (
@@ -630,7 +630,7 @@ export const ExercisePage = () => {
                         <div className="text-center text-xs opacity-90">Thời gian</div>
                       </div>
                     )}
-                    
+
                     {/* Rep counter */}
                     <div className={`w-full px-4 py-3 rounded-lg border-2 ${
                       isExercising && analysisData?.rep_count && analysisData.rep_count >= targetReps
@@ -653,7 +653,7 @@ export const ExercisePage = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <AngleDisplay
                   angles={analysisData?.angles}
                   exerciseType={selectedExercise || 'squat'}

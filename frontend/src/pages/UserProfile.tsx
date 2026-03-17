@@ -19,7 +19,7 @@ export const UserProfile = () => {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [activeTab, setActiveTab] = useState<'basic' | 'medical' | 'mobility'>('basic');
-  
+
   const [profile, setProfile] = useState<ProfileData>({
     age: '',
     gender: 'male',
@@ -139,7 +139,7 @@ export const UserProfile = () => {
       if (response.ok) {
         await response.json();
         setMessage({ type: 'success', text: 'Cập nhật thông tin thành công!' });
-        
+
         // Reload profile to get BMI
         await loadProfile();
       } else {
