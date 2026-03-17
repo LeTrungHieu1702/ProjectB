@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { VideoCapture } from '../components/VideoCapture';
 import { useWebSocket } from '../hooks/useWebSocket';
 import { exerciseAPI, sessionAPI } from '../utils/api';
@@ -21,6 +22,7 @@ interface PersonalizedParams {
 
 export const ExercisePage = () => {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [selectedExercise, setSelectedExercise] = useState<string | null>(null);
   const [isExercising, setIsExercising] = useState(false);
@@ -53,8 +55,11 @@ export const ExercisePage = () => {
   );
 
   useEffect(() => {
-    loadExercises();
-  }, []);
+    // Only load exercises when user is authenticated
+    if (user) {
+      loadExercises();
+    }
+  }, [user]);
 
   useEffect(() => {
     if (selectedExercise) {

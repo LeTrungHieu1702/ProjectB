@@ -1273,11 +1273,7 @@ async def login(request: LoginRequest):
     if not row or not verify_password(request.password, row[7]):
         raise HTTPException(status_code=401, detail="Invalid credentials")
 
-    user = row[:7]  # id, username, role, full_name, age, gender, doctor_id
-    if not user:
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-
-    user_id, username, role, full_name, age, gender, doctor_id = user
+    user_id, username, role, full_name, age, gender, doctor_id = row[:7]
 
     # Validate role matches the selected login type
     if role != request.role:

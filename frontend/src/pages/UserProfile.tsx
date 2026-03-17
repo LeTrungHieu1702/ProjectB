@@ -42,8 +42,13 @@ export const UserProfile = () => {
   ];
 
   useEffect(() => {
-    loadProfile();
-  }, []);
+    // Only load profile when authenticated
+    if (user) {
+      loadProfile();
+    } else {
+      setLoading(false);
+    }
+  }, [user]);
 
   useEffect(() => {
     if (message) {
