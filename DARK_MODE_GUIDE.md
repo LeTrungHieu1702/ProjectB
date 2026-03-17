@@ -5,11 +5,11 @@
 Hệ thống Dark Mode đã được tích hợp đầy đủ vào ứng dụng với các tính năng:
 
 ### Tính Năng
--  **Toggle Button**: Nút chuyển đổi theme ở góc trên navbar
--  **Lưu Preference**: Theme được lưu vào localStorage (không mất khi reload)
--  **Smooth Transition**: Chuyển đổi mượt mà với animation 300ms
--  **Full Support**: Tất cả trang đã hỗ trợ cả 2 theme
--  **Default Dark**: Mặc định mở ứng dụng sẽ là Dark Mode
+- **Toggle Button**: Nút chuyển đổi theme ở góc trên navbar
+- **Lưu Preference**: Theme được lưu vào localStorage (không mất khi reload)
+- **Smooth Transition**: Chuyển đổi mượt mà với animation 300ms
+- **Full Support**: Tất cả trang đã hỗ trợ cả 2 theme
+- **Default Dark**: Mặc định mở ứng dụng sẽ là Dark Mode
 
 ### Các File Đã Cập Nhật
 
@@ -25,7 +25,7 @@ frontend/src/context/ThemeContext.tsx
 ```
 frontend/src/components/ThemeToggle.tsx
 ```
-- Nút toggle với icon mặt trời / mặt trăng 
+- Nút toggle với icon mặt trời / mặt trăng
 - Có tooltip và accessible
 
 #### 3. **tailwind.config.js**
@@ -41,17 +41,17 @@ darkMode: 'class', // Thêm dòng này
 ```
 
 #### 5. **Pages đã cập nhật**
--  `Landing.tsx` - Trang chủ với full dark/light support
--  `Login.tsx` - Form đăng nhập
--  `LoginChoice.tsx` - Chọn loại tài khoản
--  `ExercisePage.tsx` - Trang danh sách bài tập
+- `Landing.tsx` - Trang chủ với full dark/light support
+- `Login.tsx` - Form đăng nhập
+- `LoginChoice.tsx` - Chọn loại tài khoản
+- `ExercisePage.tsx` - Trang danh sách bài tập
 
 ## Cách Sử Dụng
 
 ### Cho User:
 1. Mở ứng dụng
-2. Nhìn lên góc trên navbar, tìm nút có icon Light hoặc Dark
-3. Click vào nút để chuyển đổi Dark sang Light
+2. Nhìn lên góc trên navbar, tìm nút có icon mặt trời hoặc mặt trăng
+3. Click vào nút để chuyển đổi Dark / Light
 4. Theme sẽ được lưu tự động, lần sau vào sẽ giữ nguyên
 
 ### Cho Developer:
@@ -117,8 +117,8 @@ export const MyComponent = () => {
 ## Kết Quả
 
 Bây giờ ứng dụng của bạn đã có:
--  Dark Mode đầy đủ
--  Light Mode đầy đủ
--  Toggle button dễ dùng
--  Lưu preference tự động
--  UI đẹp cả 2 theme
+- Dark Mode đầy đủ
+- Light Mode đầy đủ
+- Toggle button dễ dùng
+- Lưu preference tự động
+- UI đẹp cả 2 theme
